@@ -1,73 +1,47 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-void main() {
-  return runApp(
-    MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.red,
-        appBar: AppBar(title: Text('Dicee'), backgroundColor: Colors.red),
-        body: DicePage(),
-      ),
-    ),
-  );
-}
+void main() => runApp(MaterialApp(home: BallPage()));
 
-class DicePage extends StatefulWidget {
-  const DicePage({super.key});
-
+class BallPage extends StatelessWidget {
   @override
-  State<DicePage> createState() => _DicePageState();
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      appBar: AppBar(
+        backgroundColor: Colors.blue.shade900,
+        title: Text('Ask Me Anything'),
+      ),
+      body: Ball(),
+    );
+  }
 }
 
-class _DicePageState extends State<DicePage> {
-  int leftDiceNumber = 1;
-  int rightDiceNumber = 1;
+class Ball extends StatefulWidget {
+  @override
+  _BallState createState() => _BallState();
+}
 
-  void changeDiceFace(){
-    setState(() {
-      leftDiceNumber = Random().nextInt(6) + 1;
-      rightDiceNumber = Random().nextInt(6) + 1;
-    });
-  }
+class _BallState extends State<Ball> {
+  int ballNumber = 1;
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Expanded(
-            child: TextButton(
-              onPressed: () {
-                changeDiceFace();
-              },
-              style: ButtonStyle(
-                foregroundColor: WidgetStateProperty.all(Colors.black),
-                overlayColor: WidgetStateProperty.all(Colors.transparent),
-                padding: WidgetStateProperty.all(
-                  EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                ),
-              ),
-              child: Image.asset('images/dice$leftDiceNumber.png'),
-            ),
+      child: TextButton(
+        onPressed: () {
+          setState(() {
+            ballNumber = Random().nextInt(5) + 1;
+          });
+        },
+        style: ButtonStyle(
+          foregroundColor: WidgetStateProperty.all(Colors.black),
+          overlayColor: WidgetStateProperty.all(Colors.transparent),
+          padding: WidgetStateProperty.all(
+            EdgeInsets.symmetric(horizontal: 12, vertical: 6),
           ),
-          Expanded(
-            child: TextButton(
-              onPressed: () {
-                changeDiceFace();
-              },
-              style: ButtonStyle(
-                foregroundColor: WidgetStateProperty.all(Colors.black),
-                overlayColor: WidgetStateProperty.all(Colors.transparent),
-                padding: WidgetStateProperty.all(
-                  EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                ),
-              ),
-              child: Image.asset('images/dice$rightDiceNumber.png'),
-            ),
-          ),
-        ],
+        ),
+        child: Image.asset('images/ball$ballNumber.png'),
       ),
     );
   }
