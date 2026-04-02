@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "847287864524",
+    "firebase_url": "https://kidsway-staging.firebaseio.com",
+    "project_id": "kidsway-staging",
+    "storage_bucket": "kidsway-staging.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847287864524:android:00c8c9be6184192f700669",
+        "android_client_info": {
+          "package_name": "com.flutter.learning.flutter_learning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhugBA7LPt8QUPSkUZyAKduZuvEb66BG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847287864524:android:629c5c2cb2453462700669",
+        "android_client_info": {
+          "package_name": "com.kidsway.driver"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhugBA7LPt8QUPSkUZyAKduZuvEb66BG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847287864524:android:eae97c137fa09c7b700669",
+        "android_client_info": {
+          "package_name": "com.kidsway.parent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhugBA7LPt8QUPSkUZyAKduZuvEb66BG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
